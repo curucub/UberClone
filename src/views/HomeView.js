@@ -5,6 +5,8 @@ import Header from '../components/CustomHeader';
 import { Icon } from 'native-base';
 import Search from '../components/Search';
 import Map from '../components/Map';
+import PricePreview from '../components/PricePreview';
+import { connect } from 'react-redux';
 
 //Cria uma linha vertical invisivel para permitir abrir o drawer menu 
 //=> https://stackoverflow.com/questions/44602642/react-native-drawer-not-opening-on-swipe-over-map/49905612#49905612
@@ -26,10 +28,20 @@ class HomeView extends Component {
 				<Map/>
 				<Header onClickAction={() => this.props.navigation.openDrawer()} style={ HomeViewStyle.Header }/>
 				<SearchBar/>
+				{
+					this.props.destination &&
+					<PricePreview />
+				}
 				<EdgeVertical />
 			</View>
 		)
 	}
 }
 
-export default HomeView;
+const mapStatesToProps = (state, props) => {
+  const { region } = state.MapPlacesReducer;
+  const { origin, destination } = state.DirectionsReducers;
+  return { region, origin, destination };
+}
+
+export default connect(mapStatesToProps, {}, null)(HomeView);

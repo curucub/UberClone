@@ -43,8 +43,8 @@ const HomeView = StyleSheet.create({
         alignItems: 'flex-start',
         borderTopLeftRadius: 2,
         borderTopRightRadius: 2,
-        borderBottomLeftRadius: 8, 
-        borderBottomRightRadius: 8
+        borderBottomLeftRadius: 2, 
+        borderBottomRightRadius: 2
     },
     container: {
         height: Dimensions.HEIGHT,

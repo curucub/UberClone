@@ -13,7 +13,7 @@ class Directions extends Component {
         destination={destination}
         origin={origin}
         onReady={onReady}
-        apikey={APIKEY}
+        apikey="AIzaSyB1O8amubeMkw_7ok2jUhtVj9IkME9K8sc"
         strokeWidth={3}
         strokeColor={SOFT_BLACK_COLOR}
       />

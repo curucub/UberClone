@@ -10,11 +10,11 @@ const PopulateCarsInMap = (radius, position, data) => {
       let _x = Math.pow(( lat - latitude ), 2);
       let _y = Math.pow(( long - longitude ), 2);
       if (( _x + _y ) <= _radius) {
-          // item.uid = id;
-          // item.distance = _x + _y;                                
-          // item.distance = Math.sqrt( item.distance );             
-          // item.distance = item.distance * (60 * 1852 );           
-          // item.distance = item.distance.toFixed(4);              
+          item.uid = id;
+          item.distance = _x + _y;                                
+          item.distance = Math.sqrt( item.distance );             
+          item.distance = item.distance * (60 * 1852 );           
+          item.distance = item.distance.toFixed(4);              
           return true;
       }
   })

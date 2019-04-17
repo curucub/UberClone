@@ -37,7 +37,6 @@ const ContentDrawerNavigator = (props) => (
           textStyle={ AvatarText }
         />
         <View style={ SeparatorLine } />
-        <Tip />
         <DrawerItems {...props} />
       </SafeAreaView>
     </ScrollView>

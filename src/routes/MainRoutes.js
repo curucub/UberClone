@@ -58,7 +58,7 @@ const MainRoutes = createDrawerNavigator(
         initialRouteName: 'Home',
         contentComponent: ContentDrawerNavigator,
         contentOptions: {
-            labelStyle: { fontFamily: 'Open Sans', fontSize: 18, color: 'black', fontWeight: '100' }
+            labelStyle: { fontFamily: 'Montserrat', fontSize: 18, color: 'black', fontWeight: '100' }
         }
     }
 )
